@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <footer
       aria-hidden="true"
-      className="relative w-full overflow-hidden pointer-events-none select-none mt-24"
+      className="relative w-full overflow-hidden pointer-events-none select-none mt-12 lg:mt-24"
     >
       <img
         src="/footer-light.svg"

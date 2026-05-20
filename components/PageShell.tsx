@@ -10,7 +10,7 @@ export function PageShell({
 }) {
   return (
     <>
-      <TopNav />
+      <TopNav tocItems={tocItems} />
       <Sidebar title="On this page" items={tocItems} />
       <div className="pt-16 lg:pl-[calc(var(--vp-side-gap)+var(--vp-sidebar-width))] lg:pr-[var(--vp-side-gap)]">
         <div className="max-w-[1136px] mx-auto px-6 lg:px-12 xl:px-16">

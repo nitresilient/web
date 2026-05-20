@@ -23,6 +23,11 @@ export const SEARCH_INDEX: SearchEntry[] = [
   { title: "Interest Areas", section: "Research", path: "/research", hash: "areas", text: "psychology economics data science machine learning cognitive perception" },
 
   { title: "Blog", path: "/blog", hash: "blog", text: "blog posts notes thoughts" },
+
+  { title: "Semester 3 Study Planner", path: "/sem3", hash: "overview", text: "sem3 semester 3 study planner iit madras bs data science 12 week interactive progress tracker dbms pdsa machine learning" },
+  { title: "DBMS", section: "Semester 3", path: "/sem3", hash: "dbms", text: "database management systems bscs2001 sql relational model normalization indexing transactions recovery query optimization er model functional dependency bcnf b+ tree acid" },
+  { title: "PDSA", section: "Semester 3", path: "/sem3", hash: "pdsa", text: "programming data structures algorithms python bscs2002 complexity sorting searching graphs dynamic programming greedy divide and conquer heaps trees pattern matching network flow" },
+  { title: "ML Foundations", section: "Semester 3", path: "/sem3", hash: "mlf", text: "machine learning foundations bscs2004 calculus linear algebra eigenvalues svd pca optimization convex lagrange probability exponential family expectation maximization" },
 ];
 
 export function searchEntries(query: string): SearchEntry[] {

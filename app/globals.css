@@ -242,6 +242,40 @@ body {
   color: var(--vp-c-brand-1);
 }
 
+@media (max-width: 1023px) {
+  .vp-doc h1 {
+    font-size: 2.2rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  .vp-doc h2 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+  .vp-doc h3 {
+    font-size: 1.25rem;
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .vp-doc h1 {
+    font-size: 1.9rem;
+  }
+  .vp-doc h2 {
+    font-size: 1.35rem;
+  }
+  .card {
+    padding: 16px;
+  }
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 .scroll-thin::-webkit-scrollbar {
   width: 6px;
   height: 6px;
