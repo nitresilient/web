@@ -13,6 +13,21 @@ export type Resource = {
   url?: string;
 };
 
+export type CoverageRow = {
+  source: string;
+  url?: string;
+  covers: string;
+  gaps: string;
+};
+
+export type Coverage = {
+  title: string;
+  intro: string;
+  rows: CoverageRow[];
+  gaps: string[];
+  verdict: string;
+};
+
 export type Subject = {
   id: string;
   code: string;
@@ -25,6 +40,7 @@ export type Subject = {
   resources: Resource[];
   projects: string[];
   exam: string[];
+  coverage?: Coverage;
 };
 
 export const SUBJECTS: Subject[] = [
@@ -499,6 +515,46 @@ export const SUBJECTS: Subject[] = [
       "Pitfall: off-by-one errors in binary search; Python recursion-depth limits on deep recursion.",
       "Pitfall: mutable default arguments in Python functions; miscounting nested-loop complexity.",
     ],
+    coverage: {
+      title: "Can self-study courses replace PDSA?",
+      intro:
+        "A common question: can boot.dev's two DSA courses, or NeetCode's 250-problem sheet, cover PDSA on their own? Mapped against the 12-week syllabus, here is how far each gets. Short answer: boot.dev DSA 1 + 2 covers most of it and — unlike NeetCode — includes the theory weeks; NeetCode 250 is excellent practice volume but not a standalone substitute.",
+      rows: [
+        {
+          source: "boot.dev — Learn DSA in Python (course 1)",
+          url: "https://www.boot.dev/courses/learn-data-structures-and-algorithms-python",
+          covers:
+            "W2 complexity (Big-O, logs/exponents, exponential time) · W2 sorting · W3 stacks, queues, linked lists, hashmaps · W6 binary trees / BST · W7 self-balancing trees (red-black) · W4 graphs, BFS & DFS · W10 tries · W11 P vs NP",
+          gaps:
+            "No Union-Find, no recurrence/Master-Theorem treatment of sorting, no string-matching algorithms.",
+        },
+        {
+          source: "boot.dev — Learn DSA in Python 2 (course 2)",
+          url: "https://www.boot.dev/courses/learn-data-structures-and-algorithms-python-2",
+          covers:
+            "W5 Dijkstra, Bellman-Ford, A* shortest paths · W6 heaps & priority queues · W9 dynamic programming & edit distance · W11 linear programming",
+          gaps:
+            "No topological sort, no divide-and-conquer / Master Theorem, no network flows / max-flow-min-cut, no greedy paradigm or MST.",
+        },
+        {
+          source: "NeetCode 250",
+          url: "https://neetcode.io/practice",
+          covers:
+            "Practice volume for W3 arrays/stacks/queues/linked lists/hashing · W4–5 graph traversal · W6 heaps & BST · W7 greedy & intervals · W9 dynamic programming · W10 tries · backtracking",
+          gaps:
+            "It is a problem set, not a curriculum — no complexity proofs, sorting internals, Union-Find, recurrences, balanced-tree rotations, string-matching algorithms, network flows, or P/NP theory.",
+        },
+      ],
+      gaps: [
+        "Union-Find / disjoint sets with union-by-rank and path compression (W6) — not in any of the three.",
+        "Divide & conquer formally: recurrence relations and the Master Theorem (W8) — boot.dev applies the ideas but never teaches the analysis.",
+        "String / pattern matching: KMP, Rabin-Karp, Boyer-Moore (W10) — only tries are covered.",
+        "Network flows: max-flow / min-cut, Ford-Fulkerson (W11) — absent everywhere.",
+        "Topological sort and the greedy paradigm / MST (W5, W7) — partially missed.",
+      ],
+      verdict:
+        "Verdict: NeetCode 250 alone does NOT complete PDSA — it covers roughly 60% of topics as practice only, with no theory. boot.dev DSA 1 + 2 together cover about 9–10 of the 12 weeks AND include the theory (Big-O, P vs NP, linear programming) that the IITM quizzes test. Best plan: do boot.dev 1 + 2 as the backbone, use NeetCode 250 for extra problem reps, and patch the four real gaps — Union-Find, Master Theorem, string matching, network flows — with the NPTEL PDSA lectures and CLRS. That combination genuinely completes the course.",
+    },
   },
   {
     id: "mlf",

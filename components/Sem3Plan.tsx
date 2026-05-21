@@ -411,6 +411,101 @@ function SubjectPanel({
             ))}
           </div>
 
+          {/* Course coverage (self-study mapping) */}
+          {active.coverage && (
+            <>
+              <h4
+                className="mt-8 mb-3 text-[15px] font-bold"
+                style={{ color: "var(--vp-c-text-1)" }}
+              >
+                {active.coverage.title}
+              </h4>
+              <p
+                className="mb-3 text-[13px] sm:text-[14px] leading-[1.65]"
+                style={{ color: "var(--vp-c-text-2)" }}
+              >
+                {active.coverage.intro}
+              </p>
+              <div className="flex flex-col gap-2.5">
+                {active.coverage.rows.map((row) => (
+                  <div
+                    key={row.source}
+                    className="rounded-xl p-3.5 sm:p-4"
+                    style={{
+                      background: "var(--vp-c-bg-elv)",
+                      border: "1px solid var(--vp-c-divider)",
+                    }}
+                  >
+                    <div
+                      className="text-[14px] sm:text-[15px] font-bold"
+                      style={{ color: "var(--vp-c-text-1)" }}
+                    >
+                      {row.url ? (
+                        <a
+                          href={row.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{ color: "var(--vp-c-brand-1)" }}
+                        >
+                          {row.source} ↗
+                        </a>
+                      ) : (
+                        row.source
+                      )}
+                    </div>
+                    <p
+                      className="mt-2 mb-1.5 text-[13px] sm:text-[14px] leading-[1.6]"
+                      style={{ color: "var(--vp-c-text-2)" }}
+                    >
+                      <strong style={{ color: "var(--vp-c-brand-1)" }}>
+                        Covers:{" "}
+                      </strong>
+                      {row.covers}
+                    </p>
+                    <p
+                      className="m-0 text-[13px] sm:text-[14px] leading-[1.6]"
+                      style={{ color: "var(--vp-c-text-2)" }}
+                    >
+                      <strong style={{ color: "var(--vp-c-text-3)" }}>
+                        Doesn&apos;t cover:{" "}
+                      </strong>
+                      {row.gaps}
+                    </p>
+                  </div>
+                ))}
+              </div>
+              <p
+                className="mt-4 mb-1.5 text-[12px] font-bold uppercase tracking-wide"
+                style={{ color: "var(--vp-c-text-3)" }}
+              >
+                Gaps to patch separately
+              </p>
+              <ul className="mb-3 pl-5 list-disc">
+                {active.coverage.gaps.map((g) => (
+                  <li
+                    key={g}
+                    className="text-[13px] sm:text-[14px] leading-[1.6]"
+                    style={{ color: "var(--vp-c-text-2)" }}
+                  >
+                    {g}
+                  </li>
+                ))}
+              </ul>
+              <div
+                className="rounded-lg p-3.5 text-[13px] sm:text-[14px] leading-[1.65]"
+                style={{
+                  background: "var(--vp-c-bg-alt)",
+                  borderLeft: "3px solid var(--vp-c-brand-1)",
+                  color: "var(--vp-c-text-2)",
+                }}
+              >
+                <strong style={{ color: "var(--vp-c-text-1)" }}>
+                  {active.coverage.verdict}
+                </strong>
+              </div>
+            </>
+          )}
+
           {/* Projects */}
           <h4
             className="mt-8 mb-3 text-[15px] font-bold"
