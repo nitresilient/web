@@ -20,7 +20,7 @@ const NAV_LINKS = [
   { label: "Resume", href: "/about" },
   { label: "Research", href: "/research" },
   { label: "Blog", href: "/blog" },
-  { label: "Sem 3", href: "/sem3" },
+  { label: "Diploma", href: "/diplomaplan" },
 ];
 
 const SOCIALS = [
