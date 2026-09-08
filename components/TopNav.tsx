@@ -19,6 +19,7 @@ const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "Resume", href: "/about" },
   { label: "Research", href: "/research" },
+  { label: "Opportunities", href: "/opportunities" },
   { label: "Blog", href: "/blog" },
   { label: "Diploma", href: "/diplomaplan" },
 ];
@@ -107,7 +108,7 @@ export function TopNav({ tocItems }: { tocItems?: SidebarItem[] }) {
           </span>
         </a>
 
-        <div className="hidden md:flex items-center gap-2 ml-2 mr-auto">
+        <div className="hidden xl:flex items-center gap-2 ml-2 mr-auto">
           <button
             onClick={() => setSearchOpen(true)}
             className="flex items-center gap-2 h-9 px-3 pr-2 rounded-full border border-[var(--vp-c-divider)] bg-[var(--vp-c-bg-elv)] text-[var(--vp-c-text-2)] hover:border-[var(--vp-c-brand-1)] transition-colors text-sm w-[230px]"

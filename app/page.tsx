@@ -32,8 +32,8 @@ export default function Home() {
       <h2 id="explore">Explore the Site</h2>
 
       <p>
-        Pick a path. The site is divided into a resume, research notes, and a
-        blog.
+        Pick a path. The site is divided into a resume, research notes, an
+        opportunity radar, and a blog.
       </p>
 
       <div className="card-grid">
@@ -44,6 +44,10 @@ export default function Home() {
         <a href="/research" className="card">
           <h3>Research</h3>
           <p>Current focus on ML and DSA, and broader areas of interest.</p>
+        </a>
+        <a href="/opportunities" className="card">
+          <h3>Opportunity Radar</h3>
+          <p>A checked shortlist of internships and student programs that fit.</p>
         </a>
         <a href="/blog" className="card">
           <h3>Blog</h3>

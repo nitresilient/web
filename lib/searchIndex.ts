@@ -8,7 +8,7 @@ export type SearchEntry = {
 
 export const SEARCH_INDEX: SearchEntry[] = [
   { title: "Welcome", path: "/", hash: "welcome", text: "home welcome yashi saxena nitresilient psychology economics data science" },
-  { title: "Explore the Site", path: "/", hash: "explore", text: "explore resume research blog" },
+  { title: "Explore the Site", path: "/", hash: "explore", text: "explore resume research opportunities internships blog" },
   { title: "What I'm Doing Now", path: "/", hash: "now", text: "machine learning dsa python leetcode" },
   { title: "Contact", path: "/", hash: "contact", text: "email github linkedin leetcode nitresilient" },
 
@@ -23,6 +23,13 @@ export const SEARCH_INDEX: SearchEntry[] = [
   { title: "Interest Areas", section: "Research", path: "/research", hash: "areas", text: "psychology economics data science machine learning cognitive perception" },
 
   { title: "Blog", path: "/blog", hash: "blog", text: "blog posts notes thoughts" },
+
+  { title: "Opportunity Radar", path: "/opportunities", hash: "opportunities", text: "opportunities internships women programs careers yashi eligibility 2027 2028" },
+  { title: "Apply First", section: "Opportunity Radar", path: "/opportunities", hash: "apply-first", text: "goldman sachs summer analyst amazon women world jpmorgan code for good india apply" },
+  { title: "Build the Pipeline", section: "Opportunity Radar", path: "/opportunities", hash: "pipeline", text: "jpmorgan winning women intuit internship goldman catalyst alerts mentorship" },
+  { title: "Conditional Research Match", section: "Opportunity Radar", path: "/opportunities", hash: "conditional", text: "microsoft undergraduate research internship psychology data science hci health" },
+  { title: "Skip List", section: "Opportunity Radar", path: "/opportunities", hash: "skip", text: "salesforce amazon applied scientist uber she++ google step not eligible" },
+  { title: "Application Rule", section: "Opportunity Radar", path: "/opportunities", hash: "rule", text: "degree graduation year ba 2028 bs data science 2029 eligibility" },
 
   { title: "Diploma Term Plan", path: "/diplomaplan", hash: "overview", text: "diploma term plan iit madras bs data science sem 3 4 5 6 7 8 schedule prerequisite chain compliance rule may 2024 checkpoint warning removal" },
   { title: "Term Plan Table", section: "Diploma", path: "/diplomaplan", hash: "term-plan", text: "term plan six semesters courses projects load distribution" },
